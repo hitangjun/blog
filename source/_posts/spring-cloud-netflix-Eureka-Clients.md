@@ -41,27 +41,27 @@ When a client registers with Eureka, it provides meta-data about itself such as 
 
 当一个客户端注册到Eureka,它提供关于自己的元数据（诸如主机和端口，健康指标URL，首页等）。Eureka通过一个服务从各个实例接收心跳信息。如果心跳接收失败超过配置的时间，实例将会正常从注册表里面移除。
 
-
 Example eureka client:
 
-    @Configuration
+``` java
+	@Configuration
 	@ComponentScan
 	@EnableAutoConfiguration
 	@EnableEurekaClient
 	@RestController
 	public class Application {
-	
+
 	    @RequestMapping("/")
 	    public String home() {
-	        return "Hello world";
+		return "Hello world";
 	    }
-	
-	    public static void main(String[] args) {
-	        new SpringApplicationBuilder(Application.class).web(true).run(args);
-	    }
-	
-	}
 
+	    public static void main(String[] args) {
+		new SpringApplicationBuilder(Application.class).web(true).run(args);
+	    }
+
+	}
+``` 
 (i.e. utterly normal Spring Boot app). In this example we use @EnableEurekaClient explicitly, but with only Eureka available you could also use @EnableDiscoveryClient. Configuration is required to locate the Eureka server. Example:
 
 在这个例子里我们使用 @EnableEurekaClient 来声明, 但只有使 Eureka 生效还得 使用 @EnableDiscoveryClient。 配置要求 定位Eureka服务端。 例如:
@@ -130,8 +130,8 @@ Because of the way Eureka works internally, it will still publish a non-secure U
 
 因为Eureka的内部工作方式，它将继续推送一个非安全的URL的状态和主页，除非你已覆盖那些声明。你可以使用占位符或者配置eureka实例的url。 例如：
 
-
 application.yml
+
 	eureka:
 	  instance:
 	    statusPageUrl: https://${eureka.hostname}/info
