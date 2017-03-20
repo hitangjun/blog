@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: HITANGJUN's Blog
+title: HIHEXO
 subtitle: Read Learn & Share
 description:
-author: John Tang
+author: hihexo
 language:
 timezone:
 
@@ -19,10 +19,10 @@ permalink_defaults:
 
 # Directory
 source_dir: source
-public_dir: ../hitangjun.github.io
-tag_dir: tags
+public_dir: ../hihexo
+#tag_dir: tags
 archive_dir: archives
-category_dir: categories
+#category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
@@ -69,3 +69,15 @@ theme: even
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+
+# Generator-archive
+archive_generator:
+  per_page: 0  # 归档页文章数, 参数为 0 时不分页
+  yearly: true
+  monthly: false
+  daily: false
+
+# Generator-tag
+tag_generator:
+  per_page: 0 # 标签页文章数, 参数为 0 时不分页

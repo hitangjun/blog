@@ -17,7 +17,7 @@ permalink:
 Ribbon is a client side load balancer which gives you a lot of control over the behaviour of HTTP and TCP clients. Feign already uses Ribbon, so if you are using @FeignClient then this section also applies.
 
 Ribbon是一个客户端的负载均衡器，可以提供很多HTTP和TCP的控制行为。Feign已经使用了Ribbon，所以如果你使用了@FeignClient，Riboon也同样被应用了。
-
+<!-- more -->
 A central concept in Ribbon is that of the named client. Each load balancer is part of an ensemble of components that work together to contact a remote server on demand, and the ensemble has a name that you give it as an application developer (e.g. using the @FeignClient annotation). 
 
 Ribbon核心的概念是named client。 每个负载均衡器都是共同体的一部分，可以一起运行去连接远程服务器，你会给你的应用设置一个名字（比如使用@FeignClient注解）。
@@ -26,7 +26,7 @@ Spring Cloud creates a new ensemble as an ApplicationContext on demand for each 
 
 Spring Cloud使用RibbonClientConfiguration为每一个命名的客户端建立一个新系列为满足ApplicationContext的需求。 这包括一个ILoadBalancer， 一个RestClient和一个ServerListFilter。
 
-<!-- more -->
+
 
 ### How to Include Ribbon 如何引入Ribbon
 To include Ribbon in your project use the starter with group org.springframework.cloud and artifact id spring-cloud-starter-ribbon. See the Spring Cloud Project page for details on setting up your build system with the current Spring Cloud Release Train.

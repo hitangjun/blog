@@ -21,13 +21,13 @@ This project provides Netflix OSS integrations for Spring Boot apps through auto
 
 
 该项目通过自动配置和绑定到Spring环境和其他Spring编程模型惯例,为Spring Boot应用程序提供Netflix OSS集成。 通过几个简单的注解，您可以快速启用和配置应用程序中的常见功能模块，并使用久经考验的Netflix组件构建大型分布式系统。 提供的功能模块包括服务发现（Eureka），断路器（Hystrix），智能路由（Zuul）和客户端负载均衡（Ribbon）。
-
+<!-- more -->
 
 ## Service Discovery: Eureka Clients 服务发现:Eureka客户端
 Service Discovery is one of the key tenets of a microservice based architecture. Trying to hand configure each client or some form of convention can be very difficult to do and can be very brittle. Eureka is the Netflix Service Discovery Server and Client. The server can be configured and deployed to be highly available, with each server replicating state about the registered services to the others.
 
 服务发现是microservice基础架构的关键原则之一。尝试亲手配置每个客户端或某种格式的约定可以说是非常困难的和非常脆弱的。Eureka是Netflix服务发现的一种服务和客户端。这种服务是可以被高可用性配置的和部署,并且在注册的服务当中，每个服务的状态可以互相复制给彼此。
-<!-- more -->
+
 
 ### How to Include Eureka Client 如何使用Eureka Client
 To include Eureka Client in your project use the starter with group org.springframework.cloud and artifact id spring-cloud-starter-eureka. See the Spring Cloud Project page for details on setting up your build system with the current Spring Cloud Release Train.
